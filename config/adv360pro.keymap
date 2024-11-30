@@ -35,6 +35,8 @@
 
 #define NUMERIC  N0 N1 N2 N3 N4 N5 N6 N7 N8 N9
 
+ZMK_COMBO(copy, &kp LG(C), LM3 LB2, 0, 50)
+
 #define XXX  &none
 #define ___  &trans
 
