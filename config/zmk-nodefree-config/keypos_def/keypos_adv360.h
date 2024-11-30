@@ -13,8 +13,8 @@
 
 #pragma once
 
-#define ADV360_LAYER(name, start, mid1, mid2, end, thumb_row1, thumb_row_2, thumb_row_3) \
-  ZMK_LAYER(name, start thumb_row_1 mid1 thumb_row_2 mid2 thumb_row3 end)
+#define ADV360_LAYER(name, start, mid1, mid2, end, thumb_row1, thumb_row2, thumb_row3) \
+  ZMK_LAYER(name, start thumb_row1 mid1 thumb_row2 mid2 thumb_row3 end)
 
 #define LN0  6  // left-number row
 #define LN1  5
