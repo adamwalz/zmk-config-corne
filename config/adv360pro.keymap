@@ -47,14 +47,14 @@ ZMK_COMBO(copy, &kp LG(C), LM3 LB2, 0, 50)
 //     XXX &kp H &kp J &kp K &kp L &kp SEMI &kp SQT &kp LSHFT &kp Z &kp X &kp C &kp V &kp B, // mid1
 //     &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT XXX &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT, //mid2
 //     &kp UP &kp DOWN &kp LBKT &kp RBKT XXX, //end
-//     &kp LCTRL &kp ALT &kp LGUI &kp RCTRL, //thumb_row1
+//     &kp LCTRL &kp LALT &kp LGUI &kp RCTRL, //thumb_row1
 //     &kp HOME &kp PG_UP, //thumb_row2
 //     &kp BSPC &kp DEL &kp END &kp PG_DN &kp ENTER &kp SPACE // thumb_row3
 //)
 
 ZMK_LAYER(Base,
      &kp EQUAL &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 XXX XXX &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp TAB &kp Q &kp W &kp E &kp R &kp T XXX XXX &kp Y &kp U &kp I &kp O &kp P &kp BSLH &kp ESC &kp A &kp S &kp D &kp F &kp G XXX
-     &kp LCTRL &kp ALT &kp LGUI &kp RCTRL
+     &kp LCTRL &kp LALT &kp LGUI &kp RCTRL
      XXX &kp H &kp J &kp K &kp L &kp SEMI &kp SQT &kp LSHFT &kp Z &kp X &kp C &kp V &kp B
      &kp HOME &kp PG_UP
      &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT XXX &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT
