@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/outputs.h>
 
@@ -86,18 +85,6 @@ ZMK_BEHAVIOR(smart_shft, mod_morph,
     mods = <(MOD_LSFT)>;
 )
 
-/* Standard Kinesis Advantage 360 Pro behaviors and macros */
-
-ZMK_BEHAVIOR(magic, hold_tap,
-    flavor = "tap-preferred";
-    bindings = <&mo>, <&rgb_ug_status_macro>;
-    tapping-term-ms = <200>;
-)
-
-ZMK_BEHAVIOR(rgb_ug_status_macro, macro,
-    bindings = <&rgb_ug RGB_STATUS>;
-)
-
 #define XXX  &none
 #define ___  &trans
 
@@ -107,7 +94,7 @@ ZMK_BEHAVIOR(rgb_ug_status_macro, macro,
 #define MOUSE   3
 #define MAGIC   4
 
-#define TO_MAGIC  &magic MAGIC 0
+#define TO_MAGIC  &to MAGIC
 #define ONEPASSWD &kp LG(LS(SPACE))
 #define SPOTLIGHT &kp LG(SPACE)
 #define EMOJI     &kp LG(LC(SPACE))
