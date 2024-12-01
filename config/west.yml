@@ -9,5 +9,8 @@ manifest:
       remote: adamwalz
       revision: main
       import: app/west.yml
+    - name: zmk-helpers
+      remote: adamwalz
+      revision: main
   self:
     path: config
