@@ -27,6 +27,10 @@ ZMK_MOD_MORPH(smart_shft,
     mods = <(MOD_LSFT)>;
 )
 
+ZMK_MACRO_ONE_PARAM(bt_sel,
+    bindings = <&out OUT_BLE>, <&macro_param_1to2>, <&bt BT_SEL MACRO_PLACEHOLDER>;
+)
+
 // combos
 ZMK_COMBO(copy_cut, &copy_cut,   LB2 LB3, ALL)  // copy on tap, cut on double-tap, active on all layers
 ZMK_COMBO(paste,    &kp LS(INS), LB1 LB2, ALL)  // paste, active on all layers
