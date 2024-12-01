@@ -94,6 +94,10 @@ ZMK_BEHAVIOR(magic, hold_tap,
     tapping-term-ms = <200>;
 )
 
+ZMK_BEHAVIOR(rgb_ug_status_macro, macro,
+    bindings = <&rgb_ug RGB_STATUS>;
+)
+
 #define XXX  &none
 #define ___  &trans
 
