@@ -11,92 +11,9 @@
 
 //#include "./mouse.dtsi"
 
-#define LEFT_HAND_KEYS   LN6 LN5 LN4 LN3 LN2 LN1 LN0 \
-                         LT6 LT5 LT4 LT3 LT2 LT1 LT0 \
-                         LM6 LM5 LM4 LM3 LM2 LM1 LM0 \
-                         LB5 LB4 LB3 LB2 LB1 LB0 \
-                         LF4 LF3 LF2 LF1 LF0
-
-#define RIGHT_HAND_KEYS  RN0 RN1 RN2 RN3 RN4 RN5 RN6 \
-                         RT0 RT1 RT2 RT3 RT4 RT5 RT6 \
-                         RM0 RM1 RM2 RM3 RM4 RM5 RM6 \
-                             RB0 RB1 RB2 RB3 RB4 RB5 \
-                                 RF0 RF1 RM2 RF3 RF4
-
-#define THUMB_KEYS           LH5 LH4     RH4 RH5 \
-                                 LH3     RH3 \
-                         LH2 LH1 LH0     RH0 RH1 RH2
-
-#define UNSET_TIMER  (-1)
-
-#define ALPHA  A B C D E F G H I J K L M N O P \
-               Q R S T U V W X Y Z
-
-#define NUMERIC  N0 N1 N2 N3 N4 N5 N6 N7 N8 N9
-
-/* Custom behaviors */
-
-#define MAKE_HRMS(name, hold_tap_flavor, ...) \
-    ZMK_HOLD_TAP(hml_ ## name, \
-        flavor = hold_tap_flavor; \
-        bindings = <&kp>, <&kp>; \
-        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>; \
-        __VA_ARGS__ \
-    ) \
-    ZMK_HOLD_TAP(hmr_ ## name, \
-        flavor = hold_tap_flavor; \
-        bindings = <&kp>, <&kp>; \
-        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>; \
-        __VA_ARGS__ \
-    )
-
-MAKE_HRMS(homes, "balanced",
-    hold-trigger-on-release;  // wait for other home row mods
-    tapping-term-ms = <270>;
-    quick-tap-ms = <300>;
-    require-prior-idle-ms = <170>;
-)
-MAKE_HRMS(shift, "tap-preferred",
-    tapping-term-ms = <170>;
-    quick-tap-ms = <300>;
-    require-prior-idle-ms = <70>;
-)
-
-ZMK_HOLD_TAP(thumb,
-    flavor = "balanced";
-    bindings = <&mo>, <&kp>;
-    tapping-term-ms = <200>;
-    quick-tap-ms = <300>;
-    // no typing streak
-)
-
-ZMK_HOLD_TAP(space,
-    flavor = "balanced";
-    bindings = <&mo>, <&kp>;
-    tapping-term-ms = <170>;
-    quick-tap-ms = <200>;
-    // no typing streak
-    retro-tap; // allow slow (hold-like) taps
-)
-
-// tap: copy | double-tap: cut
-ZMK_TAP_DANCE(copy_cut,
-    tapping-term-ms = <200>;
-    bindings = <&kp LC(INS)>, <&kp LC(X)>;
-)
-
-// tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
-ZMK_MOD_MORPH(smart_shft,
-    bindings = <&sk LSHFT>, <&caps_word>;
-    mods = <(MOD_LSFT)>;
-)
-
-// combos
-ZMK_COMBO(copy_cut, &copy_cut,   LB2 LB3, ALL)  // copy on tap, cut on double-tap, active on all layers
-ZMK_COMBO(paste,    &kp LS(INS), LB1 LB2, ALL)  // paste, active on all layers
-
-#define XXX  &none
-#define ___  &trans
+#include "general.h"
+#include "homerow_mods.h"
+#include "custom_behaviors.h"
 
 #define BASE    0
 #define LOWER   1
@@ -110,24 +27,24 @@ ZMK_COMBO(paste,    &kp LS(INS), LB1 LB2, ALL)  // paste, active on all layers
 #define EMOJI     &kp LG(LC(SPACE))
 
 ADV360_LAYER(Base,
-// ╭───────────────┬─────────────────────┬────────────────────┬────────────────────┬──────────────────────┬────────────┬────────────╮   ╭─────────────┬─────────────┬──────────────────────┬────────────────────┬────────────────────┬────────────────────────┬─────────────╮
-     &kp GRAVE       &kp N1                &kp N2               &kp N3               &kp N4                  &kp N5      XXX              XXX           &kp N6        &kp N7                 &kp N8               &kp N9               &kp N0                   &kp MINUS
-// ├───────────────┼─────────────────────┼────────────────────┼────────────────────┼──────────────────────┼────────────┼────────────┤   ├─────────────┼─────────────┼──────────────────────┼────────────────────┼────────────────────┼────────────────────────┼─────────────┤
-     &kp TAB         &kp Q                 &kp W                &kp E                &kp R                  &kp T        XXX              XXX           &kp Y         &kp U                  &kp I                &kp O                &kp P                    &kp BSLH
-// ├───────────────┼─────────────────────┼────────────────────┼────────────────────┼──────────────────────┼────────────┼────────────┤   ├─────────────┼─────────────┼──────────────────────┼────────────────────┼────────────────────┼────────────────────────┼─────────────┤
-     &mt LCTRL ESC   &hml_homes LCTRL A    &hml_homes LALT S    &hml_homes LGUI D    &hml_shift LSHIFT F    &kp G        XXX          ,   XXX           &kp H         &hmr_shift RSHIFT J    &hmr_homes RGUI K    &hmr_homes LALT L    &hmr_homes RCTRL SEMI    &kp SQT
-// ├───────────────┼─────────────────────┼────────────────────┼────────────────────┼──────────────────────┼────────────┼────────────┤   ├─────────────┼─────────────┼──────────────────────┼────────────────────┼────────────────────┼────────────────────────┼─────────────┤
-     &kp GRAVE       &kp Z                 &kp X                &kp C                &kp V                  &kp B                     ,                 &kp N         &kp M                  &kp COMMA            &kp DOT              &kp FSLH                 &kp EQUAL
-// ├───────────────┼─────────────────────┼────────────────────┼────────────────────┼──────────────────────┼────────────╯                              ╰─────────────┼──────────────────────┼────────────────────┼────────────────────┼────────────────────────┼─────────────┤
-     TO_MAGIC        XXX                   XXX                  &kp LEFT             &kp RIGHT                                        ,                               &kp LPAR               &kp LBKT             &kp RBKT             &kp RPAR                 XXX
-/* ╰───────────────┴─────────────────────┴────────────────────┴────────────────────┴──────────────────────╯                        */ , /*                          ╰──────────────────────┴─────────────────────┴───────────────────┴────────────────────────┴─────────────╯ */
-//                                                                                                 ╭──────────────────┬──────────╮         ╭───────────┬───────────────╮
-                                                                                                      &smart_shft       XXX                  ONEPASSWD    &kp TAB
-/*                                                                                ╭────────────────┼──────────────────┼──────────┤ */ , /* ├───────────┼───────────────┼─────────────────────╮ */
-                                                                                                                        EMOJI                SPOTLIGHT
-/*                                                                                |                |                  ├──────────┤ */ , /* ├───────────|               |                     | */
-                                                                                    &kp BACKSPACE    &thumb LOWER ESC   XXX                  &to MOUSE   &kp RET         &space SYMBOL SPACE
-//                                                                                ╰────────────────┴──────────────────┴──────────╯         ╰───────────┴───────────────┴─────────────────────╯
+// ╭───────────────┬───────────┬─────────────┬─────────────┬─────────────┬────────────┬────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+     &kp GRAVE       &kp N1      &kp N2        &kp N3        &kp N4         &kp N5      XXX              XXX           &kp N6        &kp N7        &kp N8        &kp N9        &kp N0        &kp MINUS
+// ├───────────────┼───────────┼─────────────┼─────────────┼─────────────┼────────────┼────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &kp TAB         &kp Q       &kp W         &kp E         &kp R         &kp T        XXX              XXX           &kp Y         &kp U         &kp I         &kp O         &kp P         &kp BSLH
+// ├───────────────┼───────────┼─────────────┼─────────────┼─────────────┼────────────┼────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &mt LCTRL ESC   A_LCTRL     S_LALT        D_LGUI        F_LSHIFT      &kp G        XXX          ,   XXX           &kp H         J_RSHIFT      K_RGUI        L_RALT        SEMI_RCTRL    &kp SQT
+// ├───────────────┼───────────┼─────────────┼─────────────┼─────────────┼────────────┼────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &kp GRAVE       &kp Z       &kp X         &kp C         &kp V         &kp B                     ,                 &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp EQUAL
+// ├───────────────┼───────────┼─────────────┼─────────────┼─────────────┼────────────╯                              ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     TO_MAGIC        XXX         XXX           &kp LEFT      &kp RIGHT                               ,                               &kp LPAR      &kp LBKT      &kp RBKT      &kp RPAR      XXX
+/* ╰───────────────┴───────────┴─────────────┴─────────────┴─────────────╯                        */ , /*                          ╰─────────────┴──────────────┴────────────┴─────────────┴─────────────╯ */
+//                                                                ╭──────────────────┬──────────╮         ╭───────────┬───────────────╮
+                                                                     &smart_shft       XXX                  ONEPASSWD    &kp TAB
+/*                                               ╭────────────────┼──────────────────┼──────────┤ */ , /* ├───────────┼───────────────┼─────────────────────╮ */
+                                                                                       EMOJI                SPOTLIGHT
+/*                                               |                |                  ├──────────┤ */ , /* ├───────────|               |                     | */
+                                                   &kp BACKSPACE    &thumb LOWER ESC   XXX                  &to MOUSE   &kp RET         &space SYMBOL SPACE
+//                                               ╰────────────────┴──────────────────┴──────────╯         ╰───────────┴───────────────┴─────────────────────╯
 )
 
 
@@ -159,7 +76,7 @@ ADV360_LAYER(Symbol,
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────┼────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp EXCL      &kp LBRC      &kp SQT       &kp DQT       &kp RBRC      &kp QMARK    XXX              XXX           &kp RSHFT     &kp RGUI      &kp LALT      &kp RCTRL     XXX           XXX
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────┼────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp HASH      &kp CARET     &kp EQUAL     &kp UNDER     &kp DLLR      &kp STAR     XXX          ,   XXX           &kp BSPC      &kp TAB       &kp SPACE     &kp ENTER     XXX           XXX
+     &kp HASH      CARET_LCTRL   EQUAL_LALT    UNDER_LGUI    DLLR_LSHFT    &kp STAR     XXX          ,   XXX           &kp BSPC      TAB_RSHFT     SPACE_RGUI    ENTER_RALT    &kp RCTRL     XXX
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────┼────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp AT        &kp LT        &kp PIPE      &kp MINUS     &kp GT        &kp FSLH                  ,                 &kp DEL       &kp LS(TAB)   XXX           XXX           XXX           XXX
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────╯                              ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
