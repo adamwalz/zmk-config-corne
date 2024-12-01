@@ -37,7 +37,7 @@
 #define MOUSE   3
 #define MAGIC   4
 
-#define TO_MAGIC  &to MAGIC
+#define TO_MAGIC  &mo MAGIC
 #define ONEPASSWD &kp LG(LS(SPACE))
 #define SPOTLIGHT &kp LG(SPACE)
 #define EMOJI     &kp LG(LC(SPACE))
