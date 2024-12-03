@@ -90,13 +90,13 @@ ADV360_LAYER(Symbol,
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬────────────┬────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      XXX           &kp GRAVE     &kp LPAR      &kp RPAR      &kp SEMI      &kp COMMA    XXX              XXX           XXX           XXX           XXX           XXX           XXX           XXX
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────┼────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp EXCL      &kp LBRC      &kp SQT       &kp DQT       &kp RBRC      &kp QMARK    XXX              XXX           &kp RSHFT     &kp RGUI      &kp LALT      &kp RCTRL     XXX           XXX
+     &kp EXCL      &kp LBRC      &kp SQT       &kp DQT       &kp RBRC      &kp QMARK    XXX              XXX           &kp SEMI      &kp RSHFT     &kp LGUI      &kp RALT      &kp RCTRL     XXX
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────┼────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp HASH      CARET_LCTRL   EQUAL_LALT    UNDER_LGUI    DLLR_LSHFT    &kp STAR     XXX          ,   XXX           &kp BSPC      TAB_RSHFT     SPACE_RGUI    ENTER_RALT    &kp RCTRL     XXX
+     &kp HASH      CARET_LCTRL   EQUAL_LALT    UNDER_LGUI    DLLR_LSHFT    &kp STAR     XXX          ,   XXX           &kp DOT       &kp BSPC      &kp TAB       &kp SPC       &kp ENTER     XXX
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────┼────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp AT        &kp LT        &kp PIPE      &kp MINUS     &kp GT        &kp FSLH                  ,                 &kp DEL       &kp LS(TAB)   XXX           XXX           XXX           XXX
+     &kp TILDE     &kp LT        &kp PIPE      &kp MINUS     &kp GT        &kp FSLH                  ,                 &kp FLSH      &kp DEL       &kp LS(TAB)   XXX           XXX           XXX
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────╯                              ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp TILDE     &kp AMPS     &kp LBKT       &kp RBKT      &kp PLUS                               ,                                XXX           XXX           XXX           XXX           XXX
+     &kp AT        &kp AMPS     &kp LBKT       &kp RBKT      &kp PLUS                               ,                                &kp LPAR      &kp LBKT      &kp RBKT      &kp RPAR      XXX
 /* ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯                        */ , /*                          ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ */
 //                                                                ╭──────────────────┬──────────╮         ╭───────────┬───────────────╮
                                                                      &kp BSLH         &kp DOT               XXX         XXX

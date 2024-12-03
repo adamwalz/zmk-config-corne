@@ -35,10 +35,7 @@ MAKE_HRMS(shift, "tap-preferred",
 #define SEMI_RCTRL  &hmr_homes RCTRL SEMI
 
 // Symbol Layer home row mods
-#define CARET_LCTRL     &hml_homes LCTRL A
-#define EQUAL_LALT      &hml_homes LALT S
-#define UNDER_LGUI      &hml_homes LGUI D
-#define DLLR_LSHFT     &hml_shift LSHFT F
-#define TAB_RSHFT     &hmr_shift RSHFT J
-#define SPACE_RGUI      &hmr_homes RGUI K
-#define ENTER_RALT      &hmr_homes RALT L
+#define CARET_LCTRL     &hml_homes LCTRL CARET
+#define EQUAL_LALT      &hml_homes LALT EQUAL
+#define UNDER_LGUI      &hml_homes LGUI UNDER
+#define DLLR_LSHFT      &hml_shift LSHFT DLLR
