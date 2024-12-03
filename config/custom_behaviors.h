@@ -15,13 +15,16 @@ ZMK_HOLD_TAP(space,
     retro-tap; // allow slow (hold-like) taps
 )
 
-// tap: copy | double-tap: cut
+// tap: copy
+// double-tap: cut
 ZMK_TAP_DANCE(copy_cut,
     tapping-term-ms = <200>;
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
 
-// tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
+// tap: sticky-shift 
+// shift + tap/ double-tap: caps-word
+// hold: shift
 ZMK_MOD_MORPH(smart_shft,
     bindings = <&sk LSHFT>, <&caps_word>;
     mods = <(MOD_LSFT)>;
