@@ -58,12 +58,12 @@ ZMK_MOD_MORPH(smart_shft,
 ZMK_MACRO(extend_line_right,
     wait-ms = <SELECT_WORD_DELAY>;
     tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp LS(DOWN) &kp LS(_END)>;
+    bindings = <&kp LS(DOWN) &kp LS(LG(RIGHT))>;
 )
 ZMK_MACRO(extend_line_left,
     wait-ms = <SELECT_WORD_DELAY>;
     tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp LS(UP) &kp LS(_HOME)>;
+    bindings = <&kp LS(UP) &kp LS(LG(LEFT))>;
 )
 ZMK_MOD_MORPH(extend_line,
     bindings = <&extend_line_right>, <&extend_line_left>;
