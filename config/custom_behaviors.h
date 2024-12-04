@@ -104,7 +104,7 @@ ZMK_MACRO(select_word_left,
 ZMK_MOD_MORPH(select_word,
     bindings = <&select_word_right>, <&select_word_left>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
-};
+)
 
 //
 // extend current selection by one word
