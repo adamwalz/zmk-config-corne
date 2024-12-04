@@ -30,3 +30,11 @@ include:
     shield: corne_left
   - board: nice_nano_v2
     shield: corne_right
+  - board: nice_nano_v2
+    shield: corne_left
+    cmake-args: -DKEYMAP_FILE=../../config/corne_36.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\"corne-36\"
+    artifact-name: corne_36_left
+  - board: nice_nano_v2
+    shield: corne_right
+    cmake-args: -DKEYMAP_FILE=../../config/corne_36.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\"corne-36\"
+    artifact-name: corne_36_right
