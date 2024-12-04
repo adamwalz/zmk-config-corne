@@ -70,6 +70,24 @@ ZMK_MOD_MORPH(extend_line,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
+//
+// extend current selection by one word
+//
+ZMK_MACRO(extend_word_right,
+    wait-ms = <SELECT_WORD_DELAY>;
+    tap-ms = <SELECT_WORD_DELAY>;
+    bindings = <&kp LA(LS(RIGHT))>;
+)
+ZMK_MACRO(extend_word_left,
+    wait-ms = <SELECT_WORD_DELAY>;
+    tap-ms = <SELECT_WORD_DELAY>;
+    bindings = <&kp LA(LS(LEFT))>;
+)
+ZMK_MOD_MORPH(extend_word,
+    bindings = <&extend_word_right>, <&extend_word_left>;
+    mods = <(LSHIFT|RSHIFT)>;
+)
+
 ZMK_MACRO_ONE_PARAM(bt_sel,
     bindings = <&out OUT_BLE>, <&macro_param_1to2>, <&bt BT_SEL MACRO_PLACEHOLDER>;
 )
