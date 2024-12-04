@@ -22,6 +22,21 @@ ZMK_TAP_DANCE(copy_cut,
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
 
+ZMK_TAP_DANCE(kp_dot_comma,
+    tapping-term-ms = <200>;
+    bindings = <&kp KP_DOT>, <&kp COMMA>;
+)
+
+ZMK_TAP_DANCE(kp_plus_kp_multiply,
+    tapping-term-ms = <200>;
+    bindings = <&kp KP_PLUS>, <&kp KP_MULTIPLY>;
+)
+
+ZMK_TAP_DANCE(kp_minus_kp_slash,
+    tapping-term-ms = <200>;
+    bindings = <&kp KP_MINUS>, <&kp KP_SLASH>;
+)
+
 // tap: sticky-shift 
 // shift + tap/ double-tap: caps-word
 // hold: shift
