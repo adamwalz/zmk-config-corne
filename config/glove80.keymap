@@ -95,21 +95,21 @@ GLV80_LAYER(Cursor,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮                                   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
      XXX             XXX             XXX             XXX             XXX                                                 XXX             XXX             XXX             XXX             XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────╮   ╭───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     XXX             &kp RET         &kp SPACE       &kp TAB         &kp DEL         &kp INSERT          &kp INSERT      &kp DEL         &kp TAB         &kp SPC         &kp RET         &kp ESC
+     &kp ESC         &kp RET         &kp SPACE       &kp TAB         &kp DEL         &kp INSERT          &kp INSERT      &kp DEL         &kp TAB         &kp SPACE       &kp RET         &kp ESC
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &kp LG(H)       &extend_line    &kp LG(LS(Z))   &kp LG(Z)       &extend_word    XXX                 XXX             &kp BSPC        &kp LG(Z)       &kp LG(LS(Z))   &kp LSHFT       &kp LG(K)
+     &kp LG(H)       &extend_line    &kp LG(LS(Z))   &kp LG(Z)       &extend_word    &copy_cut           &copy_cut       &extend_word    &kp LG(Z)       &kp LG(LS(Z))   &extend_line    &kp LG(H)
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &kp LG(G)       &kp LCTRL       &kp LALT        &kp LGUI        &kp RSHFT       &copy_cut           &copy_cut       &kp LEFT        &kp UP          &kp DOWN        &kp RIGHT       &kp LG(L)
+     &kp LG(G)       &kp LCTRL       &kp LALT        &kp LGUI        &kp LSHFT       &kp LS(INS)         &kp LS(INS)     &kp LEFT        &kp UP          &kp DOWN        &kp RIGHT       &kp LG(G)
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &kp LG(LS(G))   &select_line    &kp LG(A)       &kp LG(F)       &select_word    &kp LS(INS)       , &kp LS(INS)     &kp HOME        &kp PG_UP       &kp PG_DN       &kp END         &kp LG(J)
+     &kp LG(LS(G))   &select_line    &kp LG(A)       &kp LG(F)       &select_word    &select_none    ,   &select_none    &select_word    &kp LG(F)       &kp LG(A)       &select_line    &kp LG(LS(G))
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────╯   ╰───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     XXX             XXX             XXX             XXX             XXX                       ,                   &kp LG(F)       &kp LG(LS(G))   &kp LG(G)       &kp LG(H)       &kp LG(DOT)
+     &kp LG(J)       &kp LG(K)       &kp LG(L)       &sk LSHFT       &kp BSPC                        ,                   &kp BSPC        &sk LSHFT       &kp LG(L)       &kp LG(K)       &kp LG(DOT)
 // ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯                                   ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯
                                                                                                      ,
 //                                              ╭───────────────┬───────────────┬───────────────╮         ╭───────────────┬───────────────┬───────────────╮
-                                                  XXX             XXX             &kp TAB                   XXX             XXX             XXX
+                                                  &select_word    &select_line    &kp LG(A)                 &select_none    &extend_line    &extend_word
 /*                                              ├───────────────┼───────────────┼───────────────┤ */ , /* ├───────────────┼───────────────┼───────────────┤ */
-                                                  XXX             XXX             &tog CURSOR               &kp LG(A)       XXX             XXX
+                                                  &kp HOME        &kp TAB         &tog CURSOR               &kp PG_UP       &kp PG_DN       &kp END
 //                                              ╰───────────────┴───────────────┴───────────────╯         ╰───────────────┴───────────────┴───────────────╯
 )
 

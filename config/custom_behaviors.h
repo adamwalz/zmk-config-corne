@@ -52,6 +52,12 @@ ZMK_MOD_MORPH(smart_shft,
     mods = <(MOD_LSFT)>;
 )
 
+ZMK_MACRO(select_none,
+    wait-ms = <SELECT_WORD_DELAY>;
+    tap-ms = <SELECT_WORD_DELAY>;
+    bindings = <&kp DOWN &kp UP &kp RIGHT &kp LEFT>;
+)
+
 //
 // select current line
 //
