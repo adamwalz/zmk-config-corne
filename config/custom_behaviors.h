@@ -1,3 +1,10 @@
+//
+// SELECT_WORD_DELAY defines how long the macro waits (milliseconds)
+// after moving the cursor before it selects a word.  A larger delay
+// may allow the macro to move to the next word upon each invocation.
+//
+#define SELECT_WORD_DELAY 1
+
 ZMK_HOLD_TAP(thumb,
     flavor = "balanced";
     bindings = <&mo>, <&kp>;
