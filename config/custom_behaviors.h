@@ -45,6 +45,24 @@ ZMK_MOD_MORPH(smart_shft,
     mods = <(MOD_LSFT)>;
 )
 
+//
+// extend current selection by one line
+//
+ZMK_MACRO(extend_line_right,
+    wait-ms = <SELECT_WORD_DELAY>;
+    tap-ms = <SELECT_WORD_DELAY>;
+    bindings = <&kp LS(DOWN) &kp LS(_END)>;
+)
+ZMK_MACRO(extend_line_left,
+    wait-ms = <SELECT_WORD_DELAY>;
+    tap-ms = <SELECT_WORD_DELAY>;
+    bindings = <&kp LS(UP) &kp LS(_HOME)>;
+)
+ZMK_MOD_MORPH(extend_line,
+    bindings = <&extend_line_right>, <&extend_line_left>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
 ZMK_MACRO_ONE_PARAM(bt_sel,
     bindings = <&out OUT_BLE>, <&macro_param_1to2>, <&bt BT_SEL MACRO_PLACEHOLDER>;
 )
