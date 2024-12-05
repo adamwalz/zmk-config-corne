@@ -85,7 +85,7 @@ ADV360_LAYER(Lower,
 /*                                             ╭────────────────┼──────────────────┼────────────┤ */ , /* ├───────────────┼───────────────┼─────────────────────╮ */
                                                                                      ___                    &tog LOWER
 /*                                             |                |                  ├────────────┤ */ , /* ├───────────────|               |                     | */
-                                                  &tog CURSOR     &tog NUMBER        &tog LOWER             &tog FUNCTION   &tog SYSTEM     &top SYMBOL
+                                                  &tog CURSOR     &tog NUMBER        &tog LOWER             &tog FUNCTION   &tog SYSTEM     &tog SYMBOL
 //                                             ╰────────────────┴──────────────────┴────────────╯         ╰───────────────┴───────────────┴─────────────────────╯
 )
 
