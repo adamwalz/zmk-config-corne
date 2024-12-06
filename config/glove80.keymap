@@ -44,7 +44,7 @@
 #define PRACTICE42   9
 #define PRACTICE36  10
 
-#define TO_MAGIC  &mo MAGIC
+#define TO_MAGIC  &magic MAGIC
 #define ONEPASSWD &kp LG(LS(SPACE))
 #define SPOTLIGHT &kp LG(SPACE)
 #define EMOJI     &kp LG(LC(SPACE))
