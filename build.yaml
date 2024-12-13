@@ -28,17 +28,17 @@ include:
   - board: glove80_rh
   - board: nice_nano_v2
     shield: corne_left
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne 42\"
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\\\"Corne 42\\\"
     artifact-name: corne_42_left
   - board: nice_nano_v2
     shield: corne_right
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne 42\"
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\\\"Corne 42\\\"
     artifact-name: corne_42_right
   - board: nice_nano_v2
     shield: corne_left
-    cmake-args: -DKEYMAP_FILE=../../config/corne_36.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne 36\"
+    cmake-args: -DKEYMAP_FILE=../../config/corne_36.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\\\"Corne 36\\\"
     artifact-name: corne_36_left
   - board: nice_nano_v2
     shield: corne_right
-    cmake-args: -DKEYMAP_FILE=../../config/corne_36.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne 36\"
+    cmake-args: -DKEYMAP_FILE=../../config/corne_36.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\\\"Corne 36\\\"
     artifact-name: corne_36_right
