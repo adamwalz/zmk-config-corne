@@ -35,7 +35,8 @@
 #define SYSTEM    7
 #define MAGIC     8
 
-#define TO_MAGIC  &mo MAGIC
+ZMK_COMBO(magic_thumb_left, &magic MAGIC 0, LH2 LH0, BASE)
+ZMK_COMBO(magic_thumb_right, &magic MAGIC 0, RH0 RH2, BASE)
 
 ZMK_LAYER(Base,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
