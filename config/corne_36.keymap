@@ -7,7 +7,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #include "zmk-helpers/helper.h"
-#include "zmk-helpers/key-labels/36.h"
+#include "zmk-helpers/key-labels/42.h"
 
 #include "./mouse.dtsi"
 
@@ -40,11 +40,11 @@ ZMK_COMBO(magic_thumb_right, &magic MAGIC 0, RH0 RH2, BASE)
 
 ZMK_LAYER(Base,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-     &kp Q           &kp W           &kp E           &kp R           &kp T               &kp Y           &kp U           &kp I           &kp O           &kp P         
+XXX  &kp Q           &kp W           &kp E           &kp R           &kp T               &kp Y           &kp U           &kp I           &kp O           &kp P          XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     A_LCTRL         S_LALT          D_LGUI          F_LSHFT         &kp G               &kp H           J_RSHFT         K_RGUI          L_RALT          SEMI_RCTRL    
+XXX  A_LCTRL         S_LALT          D_LGUI          F_LSHFT         &kp G               &kp H           J_RSHFT         K_RGUI          L_RALT          SEMI_RCTRL     XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &kp Z           &kp X           &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH      
+XXX  &kp Z           &kp X           &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH       XXX
 // ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯
 //                     ╭────────────────────┬───────────────────┬───────────────╮         ╭─────────────────────┬───────────────────┬─────────────────────╮
                          &thumb CURSOR BSPC   &thumb NUMBER ESC   &mo LOWER                 &thumb FUNCTION TAB   &thumb SYSTEM RET   &space SYMBOL SPACE
@@ -53,11 +53,11 @@ ZMK_LAYER(Base,
 
 ZMK_LAYER(Lower,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────────────╮
-     XXX             XXX             &kp UP          XXX             &kp END             &kp LPAR        &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp_minus_kp_slash    
+XXX  XXX             XXX             &kp UP          XXX             &kp END             &kp LPAR        &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp_minus_kp_slash     XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────────────┤
-     XXX             &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_UP           &kp PRCNT       &kp KP_N4       &kp KP_N5       &kp KP_N4       &kp_plus_kp_multiply  
+XXX  XXX             &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_UP           &kp PRCNT       &kp KP_N4       &kp KP_N5       &kp KP_N4       &kp_plus_kp_multiply   XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────────────┤
-     &kp K_APP       &kp CAPS        &kp F11         &kp F12         &kp PG_DN           &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp_dot_comma         
+XXX  &kp K_APP       &kp CAPS        &kp F11         &kp F12         &kp PG_DN           &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp_dot_comma          XXX
 // ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────────────╯
 //                              ╭───────────────┬───────────────┬───────────────╮         ╭───────────────┬───────────────┬───────────────╮
                                    &tog CURSOR     &tog NUMBER     ___                       &tog FUNCTION   &tog SYSTEM     &tog MOUSE
@@ -66,11 +66,11 @@ ZMK_LAYER(Lower,
 
 ZMK_LAYER(Cursor,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-     &extend_line    &kp LG(LS(Z))   &kp LG(Z)       &extend_word    &copy_cut           &copy_cut       &extend_word    &kp LG(Z)       &kp LG(LS(Z))   &extend_line  
+XXX  &extend_line    &kp LG(LS(Z))   &kp LG(Z)       &extend_word    &copy_cut           &copy_cut       &extend_word    &kp LG(Z)       &kp LG(LS(Z))   &extend_line   XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &kp LCTRL       &kp LALT        &kp LGUI        &kp LSHFT       &kp LG(INS)         &kp LG(INS)     &kp LEFT        &kp UP          &kp DOWN        &kp RIGHT     
+XXX  &kp LCTRL       &kp LALT        &kp LGUI        &kp LSHFT       &kp LG(INS)         &kp LG(INS)     &kp LEFT        &kp UP          &kp DOWN        &kp RIGHT      XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &select_line    &kp LG(A)       &kp LG(F)       &select_word    &select_none        &select_none    &select_word    &kp LG(F)       &kp LG(A)       &select_line  
+XXX  &select_line    &kp LG(A)       &kp LG(F)       &select_word    &select_none        &select_none    &select_word    &kp LG(F)       &kp LG(A)       &select_line   XXX
 // ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯
 //                              ╭───────────────┬───────────────┬───────────────╮         ╭───────────────┬───────────────┬───────────────╮
                                   &kp HOME        &kp TAB         &tog CURSOR               &kp PG_UP       &kp PG_DN       &kp END
@@ -79,11 +79,11 @@ ZMK_LAYER(Cursor,
 
 ZMK_LAYER(Number,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-     &extend_line    &kp LG(LS(Z))   &kp LG(Z)       &extend_word    &kp D               &kp LS(G)       &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp COLON     
+XXX  &extend_line    &kp LG(LS(Z))   &kp LG(Z)       &extend_word    &kp D               &kp LS(G)       &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp COLON      XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &kp LCTRL       &kp LALT        &kp LGUI        &kp LSHFT       &kp E               &kp K           &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS  
+XXX  &kp LCTRL       &kp LALT        &kp LGUI        &kp LSHFT       &kp E               &kp K           &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS   XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &select_line    &kp LG(A)       &kp X           &select_word    &select_none        &kp J           &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_SLASH  
+XXX  &select_line    &kp LG(A)       &kp X           &select_word    &select_none        &kp J           &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_SLASH   XXX
 // ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯
 //                              ╭───────────────┬───────────────┬───────────────╮         ╭───────────────┬───────────────┬───────────────╮
                                   &kp KP_EQUAL    &kp KP_NUM      &tog NUMBER               &kp KP_COMMA    &kp KP_DOT      &kp KP_N0
@@ -92,11 +92,11 @@ ZMK_LAYER(Number,
 
 ZMK_LAYER(Function,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-     &extend_line    &kp LG(LS(Z))   &kp LG(Z)       &extend_word    XXX                 XXX             &kp F7          &kp F8          &kp F9          &kp F10       
+XXX  &extend_line    &kp LG(LS(Z))   &kp LG(Z)       &extend_word    XXX                 XXX             &kp F7          &kp F8          &kp F9          &kp F10        XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &kp LCTRL       &kp LALT        &kp LGUI        &kp LSHFT       XXX                 XXX             &kp F4          &kp F5          &kp F6          &kp F11       
+XXX  &kp LCTRL       &kp LALT        &kp LGUI        &kp LSHFT       XXX                 XXX             &kp F4          &kp F5          &kp F6          &kp F11        XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &select_line    &kp LG(A)       XXX             &select_word    &select_none        XXX             &kp F1          &kp F2          &kp F3          &kp F12       
+XXX  &select_line    &kp LG(A)       XXX             &select_word    &select_none        XXX             &kp F1          &kp F2          &kp F3          &kp F12        XXX
 // ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯
 //                              ╭───────────────┬───────────────┬───────────────╮         ╭───────────────┬───────────────┬───────────────╮
                                   &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP              &tog FUNCTION   XXX             XXX
@@ -106,11 +106,11 @@ ZMK_LAYER(Function,
 
 ZMK_LAYER(Symbol,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-     &kp LBRC        &kp LBKT        &kp RBKT        &kp RBRC        &kp QMARK           &kp SEMI        &kp RSHFT       &kp LGUI        &kp RALT        &kp RCTRL     
+XXX  &kp LBRC        &kp LBKT        &kp RBKT        &kp RBRC        &kp QMARK           &kp SEMI        &kp RSHFT       &kp LGUI        &kp RALT        &kp RCTRL      XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     CARET_LCTRL     EQUAL_LALT      UNDER_LGUI      DLLR_LSHFT      &kp STAR            &kp DOT         &kp BSPC        &kp TAB         &kp SPC         &kp ENTER     
+XXX  CARET_LCTRL     EQUAL_LALT      UNDER_LGUI      DLLR_LSHFT      &kp STAR            &kp DOT         &kp BSPC        &kp TAB         &kp SPC         &kp ENTER      XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &kp LPAR        &kp AMPS        &kp MINUS       &kp RPAR        &kp FSLH            &kp FSLH        &kp DEL         &kp LS(TAB)     XXX             XXX           
+XXX  &kp LPAR        &kp AMPS        &kp MINUS       &kp RPAR        &kp FSLH            &kp FSLH        &kp DEL         &kp LS(TAB)     XXX             XXX            XXX
 // ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯
 //                              ╭───────────────┬───────────────┬───────────────╮         ╭───────────────┬───────────────┬───────────────╮
                                    &kp PRCNT       &kp COLON       &kp SEMI                  &tog SYMBOL     XXX             XXX
@@ -120,11 +120,11 @@ ZMK_LAYER(Symbol,
 
 ZMK_LAYER(Mouse,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-     XXX             &kp RALT        XXX             XXX             XXX                 &mkp MCLK       &kp RSHFT       &kp LGUI        &kp RALT        &kp RCTRL     
+XXX  XXX             &kp RALT        XXX             XXX             XXX                 &mkp MCLK       &kp RSHFT       &kp LGUI        &kp RALT        &kp RCTRL      XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &kp LCTRL       &kp LALT        &kp LGUI        &kp LSHFT       XXX                 &mkp LCLK       XXX             XXX             XXX             XXX           
+XXX  &kp LCTRL       &kp LALT        &kp LGUI        &kp LSHFT       XXX                 &mkp LCLK       XXX             XXX             XXX             XXX            XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     XXX             XXX             XXX             XXX             XXX                 &mkp RCLK       XXX             XXX             XXX             XXX           
+XXX  XXX             XXX             XXX             XXX             XXX                 &mkp RCLK       XXX             XXX             XXX             XXX            XXX
 // ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯
 //                              ╭───────────────┬───────────────┬───────────────╮         ╭───────────────┬───────────────┬───────────────╮
                                   &mkp LCLK       &mkp RCLK       XXX                       &tog MOUSE      XXX             XXX
@@ -133,11 +133,11 @@ ZMK_LAYER(Mouse,
 
 ZMK_LAYER(System,
 // ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬───────────────╮   ╭─────────────────┬─────────────────┬───────────────┬───────────────┬──────────────────╮
-     XXX               &rgb_ug RGB_HUD   &rgb_ug RGB_HUI   XXX               &kp SLCK            &rgb_ug RGB_SAI   &kp LSHFT         &kp LGUI        &kp LALT        &kp LCTRL        
+XXX  XXX               &rgb_ug RGB_HUD   &rgb_ug RGB_HUI   XXX               &kp SLCK            &rgb_ug RGB_SAI   &kp LSHFT         &kp LGUI        &kp LALT        &kp LCTRL         XXX
 // ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼───────────────┤   ├─────────────────┼─────────────────┼───────────────┼───────────────┼──────────────────┤
-     &rgb_ug RGB_EFR   &rgb_ug RGB_BRD   &rgb_ug RGB_BRI   &rgb_ug RGB_EFF   &kp CAPS            &rgb_ug RGB_HUI   XXX               XXX             XXX             XXX              
+XXX  &rgb_ug RGB_EFR   &rgb_ug RGB_BRD   &rgb_ug RGB_BRI   &rgb_ug RGB_EFF   &kp CAPS            &rgb_ug RGB_HUI   XXX               XXX             XXX             XXX               XXX
 // ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼───────────────┤   ├─────────────────┼─────────────────┼───────────────┼───────────────┼──────────────────┤
-     &rgb_ug RGB_SPD   &rgb_ug RGB_SAD   &rgb_ug RGB_SAI   &rgb_ug RGB_SPI   &kp KP_NUM          &rgb_ug RGB_SPI   &rgb_ug RGB_TOG   &kp PSCRN       &kp SLCK        XXX  
+XXX  &rgb_ug RGB_SPD   &rgb_ug RGB_SAD   &rgb_ug RGB_SAI   &rgb_ug RGB_SPI   &kp KP_NUM          &rgb_ug RGB_SPI   &rgb_ug RGB_TOG   &kp PSCRN       &kp SLCK        XXX               XXX
 // ╰─────────────────┴─────────────────┴─────────────────┴─────────────────┴───────────────╯   ╰─────────────────┴─────────────────┴───────────────┴───────────────┴──────────────────╯
 //                                   ╭───────────────┬───────────────┬──────────────────╮         ╭───────────────┬───────────────┬───────────────╮
                                        &kp PSCRN       XXX             XXX                          &tog SYSTEM     XXX             XXX
@@ -146,11 +146,11 @@ ZMK_LAYER(System,
 
 ZMK_LAYER(Magic,
 // ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-     &to 1             &to 2             &to 3             &to 4             &to 5                 &to 6           &to 7           XXX             XXX             &bt BT_CLR    
+XXX  &to 1             &to 2             &to 3             &to 4             &to 5                 &to 6           &to 7           XXX             XXX             &bt BT_CLR     XXX
 // ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &rgb_ug RGB_SPI   &rgb_ug RGB_SAI   &rgb_ug RGB_HUI   &rgb_ug RGB_BRI   &rgb_ug RGB_TOG       XXX             XXX             XXX             XXX             XXX           
+XXX  &rgb_ug RGB_SPI   &rgb_ug RGB_SAI   &rgb_ug RGB_HUI   &rgb_ug RGB_BRI   &rgb_ug RGB_TOG       XXX             XXX             XXX             XXX             XXX            XXX
 // ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &rgb_ug RGB_SPD   &rgb_ug RGB_SAD   &rgb_ug RGB_HUD   &rgb_ug RGB_BRD   &rgb_ug RGB_EFF       XXX             XXX             XXX             XXX             XXX           
+XXX  &rgb_ug RGB_SPD   &rgb_ug RGB_SAD   &rgb_ug RGB_HUD   &rgb_ug RGB_BRD   &rgb_ug RGB_EFF       XXX             XXX             XXX             XXX             XXX            XXX
 // ╰─────────────────┴─────────────────┴─────────────────┴─────────────────┴─────────────────╯   ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯
 //                                              ╭───────────────┬───────────────┬───────────────╮         ╭───────────────┬───────────────┬───────────────╮
                                                   &bt_sel 0       &bt_sel 1       &bt_sel 2                 &bt_sel 3       &bt_sel 4       &out OUT_USB
@@ -159,11 +159,11 @@ ZMK_LAYER(Magic,
 
 //ZMK_LAYER(Template,
 //// ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-//     XXX             XXX             XXX             XXX             XXX                 XXX             XXX             XXX             XXX             XXX           
+//XXX  XXX             XXX             XXX             XXX             XXX                 XXX             XXX             XXX             XXX             XXX            XXX
 //// ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-//     XXX             XXX             XXX             XXX             XXX                 XXX             XXX             XXX             XXX             XXX           
+//XXX  XXX             XXX             XXX             XXX             XXX                 XXX             XXX             XXX             XXX             XXX            XXX
 //// ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-//     XXX             XXX             XXX             XXX             XXX                 XXX             XXX             XXX             XXX             XXX           
+//XXX  XXX             XXX             XXX             XXX             XXX                 XXX             XXX             XXX             XXX             XXX            XXX
 //// ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯
 ////                              ╭───────────────┬───────────────┬───────────────╮         ╭───────────────┬───────────────┬───────────────╮
 //                                  XXX             XXX              XXX                      XXX         XXX             XXX
