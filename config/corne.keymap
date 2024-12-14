@@ -106,14 +106,14 @@ ZMK_LAYER(Function,
 
 ZMK_LAYER(Symbol,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-     &kp EXCL        &kp LBRC        &kp LBKT        &kp RBKT        &kp RBRC        &kp QMARK           &kp SEMI        &kp RSHFT       &kp LGUI        &kp RALT        &kp RCTRL       XXX
+     &kp QMARK       &kp LBRC        &kp LBKT        &kp RBKT        &kp RBRC        &kp SQT             &kp EXCL        &kp RSHFT       &kp LGUI        &kp RALT        &kp RCTRL       XXX
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &kp HASH        CARET_LCTRL     EQUAL_LALT      UNDER_LGUI      DLLR_LSHFT      &kp STAR            &kp DOT         &kp BSPC        &kp TAB         &kp SPC         &kp ENTER       XXX
+     &kp LT          CARET_LCTRL     EQUAL_LALT      UNDER_LGUI      DLLR_LSHFT      &kp STAR            &kp HASH        &kp BSPC        &kp TAB         &kp SPC         &kp ENTER       &kp GT
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &kp AT          &kp LPAR        &kp AMPS        &kp MINUS       &kp RPAR        &kp FSLH            &kp FSLH        &kp DEL         &kp LS(TAB)     XXX             XXX             XXX
+     XXX             &kp LPAR        &kp AMPS        &kp MINUS       &kp PLUS        &kp RPAR            &kp AT          &kp DEL         &kp LS(TAB)     &kp TILDE       &kp GRAVE       XXX
 // ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯
 //                                              ╭───────────────┬───────────────┬───────────────╮         ╭───────────────┬───────────────┬───────────────╮
-                                                  &kp PRCNT       &kp COLON       &kp SEMI                  &tog SYMBOL     XXX             XXX
+                                                  &kp PRCNT       &kp COLON       &kp BSLSH                 &tog SYMBOL     &kp DQT         &kp PIPE
 //                                              ╰───────────────┴───────────────┴───────────────╯         ╰───────────────┴───────────────┴───────────────╯
 )
 

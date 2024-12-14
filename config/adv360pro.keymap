@@ -159,20 +159,20 @@ ADV360_LAYER(Symbol,
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬────────────┬────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      XXX           &kp GRAVE     &kp LPAR      &kp RPAR      &kp SEMI      &kp COMMA    XXX              XXX           XXX           XXX           XXX           XXX           XXX           XXX
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────┼────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp EXCL      &kp LBRC      &kp SQT       &kp DQT       &kp RBRC      &kp QMARK    XXX              XXX           &kp SEMI      &kp RSHFT     &kp LGUI      &kp RALT      &kp RCTRL     XXX
+     &kp QMARK     &kp LBRC      &kp LBKT      &kp RBKT      &kp RBRC      &kp SQT      XXX              XXX           &kp EXCL      &kp RSHFT     &kp LGUI      &kp RALT      &kp RCTRL     XXX
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────┼────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp HASH      CARET_LCTRL   EQUAL_LALT    UNDER_LGUI    DLLR_LSHFT    &kp STAR     XXX          ,   XXX           &kp DOT       &kp BSPC      &kp TAB       &kp SPC       &kp ENTER     XXX
+     &kp LT        CARET_LCTRL   EQUAL_LALT    UNDER_LGUI    DLLR_LSHFT    &kp STAR     XXX          ,   XXX           &kp HASH      &kp BSPC      &kp TAB       &kp SPC       &kp ENTER     XXX
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────┼────────────┤   ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp TILDE     &kp LT        &kp PIPE      &kp MINUS     &kp GT        &kp FSLH                  ,                 &kp FSLH      &kp DEL       &kp LS(TAB)   XXX           XXX           XXX
+     XXX           &kp LPAR      &kp AMPS      &kp MINUS     &kp PLUS      &kp RPAR                  ,                 &kp AT        &kp DEL       &kp LS(TAB)   &kp TILDE     &kp GRAVE     XXX
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────╯                              ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp AT        &kp AMPS     &kp LBKT       &kp RBKT      &kp PLUS                               ,                                &kp LPAR      &kp LBKT      &kp RBKT      &kp RPAR      XXX
+     &kp TILDE     &kp LT        &kp PIPE      &kp PLUS      &kp GT                                  ,                                &kp LPAR      &kp LBKT      &kp RBKT      &kp RPAR      XXX
 /* ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯                        */ , /*                          ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ */
 //                                                                ╭──────────────────┬──────────╮         ╭───────────┬───────────────╮
-                                                                     &kp BSLH         &kp DOT               XXX         XXX
+                                                                     &kp BSLH          &kp DOT              XXX         XXX
 /*                                               ╭────────────────┼──────────────────┼──────────┤ */ , /* ├───────────┼───────────────┼─────────────────────╮ */
                                                                                        &kp STAR             XXX
 /*                                               |                |                  ├──────────┤ */ , /* ├───────────|               |                     | */
-                                                   &kp PRCNT        &kp COLON          &kp SEMI             XXX         XXX             XXX
+                                                   &kp PRCNT        &kp COLON          &kp BSLH             XXX         XXX             XXX
 //                                               ╰────────────────┴──────────────────┴──────────╯         ╰───────────┴───────────────┴─────────────────────╯
 )
 
