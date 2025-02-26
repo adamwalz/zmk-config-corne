@@ -41,8 +41,8 @@
 #define MOUSE        6
 #define SYSTEM       7
 #define MAGIC        8
-#define PRACTICE42   9
-#define PRACTICE36  10
+#define PRACTICE42   9 // Typing practice for switching from base layer for numbers and symbols
+#define PRACTICE36  10 // Typing practice for switching from base layer for numbers and symbols
 
 #define TO_MAGIC  &magic MAGIC 0
 #define ONEPASSWD &kp LG(LS(SPACE))
@@ -101,7 +101,7 @@ GLV80_LAYER(Cursor,
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
      &kp LG(H)       &extend_line    &kp LG(LS(Z))   &kp LG(Z)       &extend_word    &copy_cut           &copy_cut       &extend_word    &kp LG(Z)       &kp LG(LS(Z))   &extend_line    &kp LG(H)
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &kp LG(G)       &kp LCTRL       &kp LALT        &kp LGUI        &kp LSHFT       &select_none        &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       XXX             &kp LG(G)
+     &kp LG(G)       &kp LCTRL       &kp LALT        &kp LGUI        &kp LSHFT       &select_none        &kp LG(V)       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp LG(G)
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
      &kp LG(LS(G))   &select_line    &kp LG(A)       &kp LG(F)       &select_word    &kp LG(V)       ,   &select_none    &select_word    &kp LG(F)       &kp LG(A)       &select_line    &kp LG(LS(G))
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────╯   ╰───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
@@ -121,11 +121,11 @@ GLV80_LAYER(Number,
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────╮   ╭───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼─────────────────┤
      &kp ESC         &kp RET         &kp SPACE       &kp TAB         &kp DEL         &kp INSERT          &kp TILDE       &kp CARET       &kp HASH        &kp DLLR        &kp EXCL        &kp PIPE
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼─────────────────┤
-     &kp A           &extend_line    &kp LG(LS(Z))   &kp LG(Z)       &extend_word    &kp D               &kp LS(G)       &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp COLON       &kp PRCNT
+     &kp A           &extend_line    &kp LG(LS(Z))   &kp LG(Z)       &extend_word    &kp D               &kp LS(G)       &kp N7          &kp N8          &kp N9          &kp COLON       &kp PRCNT
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼─────────────────┤
-     &kp B           &kp LCTRL       &kp LALT        &kp LGUI        &kp LSHFT       &kp E               &kp K           &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS    &kp KP_PLUS
+     &kp B           &kp LCTRL       &kp LALT        &kp LGUI        &kp LSHFT       &kp E               &kp K           &kp N4          &kp N5          &kp N6          &kp MINUS       &kp PLUS
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼─────────────────┤
-     &kp C           &select_line    &kp LG(A)       &kp X           &select_word    &select_none    ,   &kp J           &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_SLASH    &kp KP_MULTIPLY
+     &kp C           &select_line    &kp LG(A)       &kp X           &select_word    &select_none    ,   &kp J           &kp N1          &kp N2          &kp N3          &kp SLASH       &kp STAR
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────╯   ╰───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼─────────────────┤
      ___             XXX             &kp UNDER       &sk LSHFT       &kp BSPC                        ,                   &kp LT          &kp LPAR        &kp RPAR        &kp GT          &kp AT
 // ╰───────────────┴───────────────┴───────────────┴───────────────┴───────────────╯                                   ╰───────────────┴───────────────┴───────────────┴───────────────┴─────────────────╯
@@ -133,7 +133,7 @@ GLV80_LAYER(Number,
 //                                              ╭───────────────┬───────────────┬───────────────╮         ╭───────────────┬───────────────┬───────────────╮
                                                   XXX             XXX             XXX                       &kp LBKT        &kp RBKT        &kp KP_EQUAL
 /*                                              ├───────────────┼───────────────┼───────────────┤ */ , /* ├───────────────┼───────────────┼───────────────┤ */
-                                                  &kp KP_EQUAL    &kp KP_NUM      &tog NUMBER               &kp KP_COMMA    &kp KP_DOT       &kp KP_N0
+                                                  &kp EQUAL       XXX             &tog NUMBER               &kp COMMA       &kp DOT         &kp N0
 //                                              ╰───────────────┴───────────────┴───────────────╯         ╰───────────────┴───────────────┴───────────────╯
 )
 
@@ -167,9 +167,9 @@ GLV80_LAYER(Symbol,
 // ├───────────────┼───────────────┼─────────────┼────────────┼─────────────┼───────────┤   ├───────────┼─────────────┼───────────────┼───────────────┼─────────────┼───────────┤
      &kp QMARK       &kp LBRC        &kp LBKT      &kp RBKT     &kp RBRC      &kp SQT         &kp EXCL    &kp RSHFT     &kp LGUI        &kp RALT        &kp RCTRL     XXX
 // ├───────────────┼───────────────┼─────────────┼────────────┼─────────────┼───────────┤   ├───────────┼─────────────┼───────────────┼───────────────┼─────────────┼───────────┤
-     &kp LT          CARET_LCTRL     EQUAL_LALT    UNDER_LGUI   DLLR_LSHFT    &kp STAR        &kp HASH   &kp BSPC      &kp TAB         &kp SPC         &kp ENTER     &kp GT
+     &kp LT          CARET_LCTRL     EQUAL_LALT    UNDER_LGUI   DLLR_LSHFT    &kp STAR        &kp HASH    &kp BSPC      &kp TAB         &kp SPC         &kp ENTER     &kp GT
 // ├───────────────┼───────────────┼─────────────┼────────────┼─────────────┼───────────┤   ├───────────┼─────────────┼───────────────┼─────────────────────────────┼───────────┤
-     XXX             &kp LPAR        &kp AMPS      &kp MINUS    &kp PLUS      &kp RPAR    ,   &kp AT     &kp DEL       &kp LS(TAB)     XXX             XXX           XXX
+     XXX             &kp LPAR        &kp AMPS      &kp MINUS    &kp PLUS      &kp RPAR    ,   &kp AT      &kp DEL       &kp LS(TAB)     XXX             XXX           XXX
 // ├───────────────┼───────────────┼─────────────┼────────────┼─────────────┼───────────╯   ╰───────────┼─────────────┼───────────────┼───────────────┼─────────────┼───────────┤
      &kp TILDE       &kp LT          &kp PIPE      &kp PLUS     &kp GT                    ,               &kp LPAR      &kp LBKT        &kp RBKT        &kp RPAR      ___
 // ╰───────────────┴───────────────┴─────────────┴────────────┴─────────────╯                           ╰─────────────┴───────────────┴───────────────┴─────────────┴───────────╯
