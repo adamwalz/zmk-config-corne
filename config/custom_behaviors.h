@@ -54,12 +54,21 @@ ZMK_TAP_DANCE(kp_minus_kp_slash,
     bindings = <&kp KP_MINUS>, <&kp KP_SLASH>;
 )
 
-// tap: sticky-shift 
-// shift + tap/ double-tap: caps-word
-// hold: shift
+/*
+ * This creates a smart shift key that does two different things:
+ * 
+ * - When pressed normally: Activates shift for just the next keystroke
+ *   (helpful for capitalizing a single letter without holding shift)
+ * 
+ * - When pressed while already holding shift: Activates caps word
+ *   (automatically capitalizes all letters until you press space/enter/etc.)
+ * 
+ * It's like having a special shift key that can also trigger caps lock
+ * in a smarter way when you press it while already holding shift.
+ */
 ZMK_MOD_MORPH(smart_shft,
-    bindings = <&sk LSHFT>, <&caps_word>;
-    mods = <(MOD_LSFT)>;
+    bindings = <&sk LSHIFT>, <&caps_word>;
+    mods = <(LSHIFT|RSHIFT)>;
 )
 
 ZMK_MACRO(select_none,
