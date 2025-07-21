@@ -1,4 +1,6 @@
 manifest:
+  defaults:
+    revision: v0.2
   remotes:
     - name: adamwalz
       url-base: https://github.com/adamwalz
