@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
 
@@ -91,9 +90,9 @@ ZMK_LAYER(Magic,
 // ╭───────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮   ╭─────────────────┬─────────────────┬───────────────┬───────────────┬───────────────┬─────────────────╮
      &bt BT_CLR      &to 0             &to 1             &to 2             &to 3             &to 4                 XXX               XXX               XXX             XXX             XXX             &bt BT_CLR_ALL
 // ├───────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤   ├─────────────────┼─────────────────┼───────────────┼───────────────┼───────────────┼─────────────────┤
-     &sys_reset      &rgb_ug RGB_SPI   &rgb_ug RGB_SAI   &rgb_ug RGB_HUI   &rgb_ug RGB_BRI   &rgb_ug RGB_TOG       &bl BL_TOG        &bl BL_INC        XXX             XXX             XXX             &sys_reset
+     &sys_reset      &rgb_ug RGB_SPI   &rgb_ug RGB_SAI   &rgb_ug RGB_HUI   &rgb_ug RGB_BRI   &rgb_ug RGB_TOG       &rgb RGB_TOG      &rgb RGB_BRI      &rgb RGB_HUI    &rgb RGB_SAI    &rgb RGB_SPI    &sys_reset
 // ├───────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤   ├─────────────────┼─────────────────┼───────────────┼───────────────┼───────────────┼─────────────────┤
-     &bootloader     &rgb_ug RGB_SPD   &rgb_ug RGB_SAD   &rgb_ug RGB_HUD   &rgb_ug RGB_BRD   &rgb_ug RGB_EFF       XXX               &bl BL_DEC        XXX             XXX             XXX             &bootloader
+     &bootloader     &rgb_ug RGB_SPD   &rgb_ug RGB_SAD   &rgb_ug RGB_HUD   &rgb_ug RGB_BRD   &rgb_ug RGB_EFF       &rgb RGB_EFF      &rgb RGB_BRD      &rgb RGB_HUD    &rgb RGB_SAD    &rgb RGB_SPD    &bootloader
 // ╰───────────────┴─────────────────┴─────────────────┴─────────────────┴─────────────────┴─────────────────╯   ╰─────────────────┴─────────────────┴───────────────┴───────────────┴───────────────┴─────────────────╯
 //                                              ╭───────────────┬───────────────┬───────────────╮         ╭───────────────┬───────────────┬───────────────╮
                                                   &bt_sel 0       &bt_sel 1       &bt_sel 2                 &bt_sel 3       &bt_sel 4       &out OUT_USB
