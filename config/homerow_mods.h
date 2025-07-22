@@ -56,5 +56,6 @@ MAKE_HRMS(shift, "balanced",
 // Symbol Layer home row mods
 #define CARET_LCTRL     &hml_ctrl LCTRL CARET
 #define EQUAL_LALT      &hml_alt LALT EQUAL
+#define AMPS_LALT       &hml_alt LALT AMPS
 #define UNDER_LGUI      &hml_gui LGUI UNDER
 #define DLLR_LSHFT      &hml_shift LSHFT DLLR
