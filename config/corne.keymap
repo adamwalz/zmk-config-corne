@@ -30,8 +30,8 @@
 #define LOWER     1
 #define NUMBER    2
 #define SYMBOL    3
-#define FUNCTION  5
-#define MAGIC     4
+#define FUNCTION  4
+#define MAGIC     5
 
 ZMK_COMBO(magic_thumb_left, &magic MAGIC 0, LH2 LH0, BASE)
 ZMK_COMBO(magic_thumb_right, &magic MAGIC 0, RH0 RH2, BASE)
