@@ -59,3 +59,6 @@ MAKE_HRMS(shift, "balanced",
 #define AMPS_LALT       &hml_alt LALT AMPS
 #define UNDER_LGUI      &hml_gui LGUI UNDER
 #define DLLR_LSHFT      &hml_shift LSHFT DLLR
+#define DQT_RSHFT       &hmr_shift RSHFT DQT
+#define SQT_RGUI        &hmr_gui RGUI SQT
+#define PRCNT_RALT      &hmr_alt RALT PRCNT
