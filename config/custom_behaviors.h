@@ -22,16 +22,6 @@ ZMK_HOLD_TAP(space,
     retro-tap; // allow slow (hold-like) taps
 )
 
-ZMK_HOLD_TAP(magic,
-    flavor = "tap-preferred";
-    bindings = <&mo>, <&rgb_ug_status_macro>;
-    tapping-term-ms = <200>;
-)
-
-ZMK_MACRO_ONE_PARAM(rgb_ug_status_macro,
-    bindings = <&rgb_ug RGB_STATUS>;
-)
-
 // tap: copy
 // double-tap: cut
 ZMK_TAP_DANCE(copy_cut,
