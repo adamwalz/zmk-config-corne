@@ -33,9 +33,6 @@
 #define FUNCTION  4
 #define MAGIC     5
 
-ZMK_COMBO(magic_thumb_left, &magic MAGIC 0, LH2 LH0, BASE)
-ZMK_COMBO(magic_thumb_right, &magic MAGIC 0, RH0 RH2, BASE)
-
 ZMK_LAYER(Base,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
      XXX             &kp Q           &kp W           &kp E           &kp R           &kp T               &kp Y           &kp U           &kp I           &kp O           &kp P           XXX
