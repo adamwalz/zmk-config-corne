@@ -2,14 +2,6 @@
 
 ---
 include:
-  - board: adv360pro_left
-    artifact-name: adv360pro_left-zmk
-  - board: adv360pro_right
-    artifact-name: adv360pro_right-zmk
-  - board: glove80_lh
-    artifact-name: glove80_left-zmk
-  - board: glove80_rh
-    artifact-name: glove80_right-zmk
   - board: nice_nano_v2
     shield: corne_left
     cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne\ 42\"
@@ -18,19 +10,3 @@ include:
     shield: corne_right
     cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne\ 42\"
     artifact-name: corne42_right-zmk
-  - board: nice_nano_v2
-    shield: corne_left
-    cmake-args: -DKEYMAP_FILE=../../config/corne_36.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne\ 36\"
-    artifact-name: corne36_left-zmk
-  - board: nice_nano_v2
-    shield: corne_right
-    cmake-args: -DKEYMAP_FILE=../../config/corne_36.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne\ 36\"
-    artifact-name: corne36_right-zmk
-  - board: nice_nano_v2
-    shield: corne_left
-    cmake-args: -DKEYMAP_FILE=../../config/corne_default.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne\ Default\"
-    artifact-name: corne_default_left-zmk
-  - board: nice_nano_v2
-    shield: corne_right
-    cmake-args: -DKEYMAP_FILE=../../config/corne_default.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne\ Default\"
-    artifact-name: corne_default_right-zmk
