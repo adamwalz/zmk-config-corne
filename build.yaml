@@ -4,9 +4,9 @@
 include:
   - board: nice_nano_v2
     shield: corne_left
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne\ 42\"
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne\ 36\"
     artifact-name: corne42_left-zmk
   - board: nice_nano_v2
     shield: corne_right
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne\ 42\"
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne\ 36\"
     artifact-name: corne42_right-zmk
